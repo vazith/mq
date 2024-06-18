@@ -1,0 +1,103 @@
+IN MQ THERE ARE 3 TYPES OF COMMANDS
+---------------------------------
+1) CONTROL COMMANDS 
+THESE COMMANDS ARE EXCUTES IN OS LEVEL
+
+2) MQSC COMMANDS
+THESE ARE EXCUTED AS QUEUE_MANAGER LEVEL
+
+3) PCF COMMNDS
+DISCUSS LATER 
+
+THE MQSC COMMANDS ONLY FEWS ONES THOSE NAMES
+---------------------------------------------------
+
+    ALTER
+    CLEAR
+    DEFINE
+    DELETE
+    DISPLAY
+    END
+    EXIT
+    PING
+    PURGE
+    QUIT
+    REFRESH
+    RESET
+    RESOLVE
+    RESUME
+    SET
+    START
+    STOP
+    SUSPEND
+
+
+
+Note : quit, end ,exit these 3 commands work as same in old version there is 
+single command only ..in latest version ibm added 2 more commands  quit ,exit 
+most of the mq admin uses only end
+
+
+
+
+
+
+
+
+
+CREATE A QUEUE_MANAGER 
+-------------------------
+crtmqm  queuemanager_name
+---------------------------
+
+START THE QUEUE_MANAGER
+----------------------------
+strmqm queueManager_name
+----------------------------
+
+HOW CAN GO INSIDE THAT QUEUE_MANAGER
+---------------------------------------
+runmqsc quenumanager_name
+-------------------------------------
+
+HOW CAN CHECK THE STATUS OF QUEUEMANAGER RUNNUNG (OR) STOPED
+--------------------------------------------------------------
+dspmq ( shows all the queue_manager status running (or) stoped
+---------------------------------------------------------------
+
+HOW CAN STOP QUEUE_MANAGER
+-----------------------------------
+endmqm queue_manager_name 
+-----------------------------------
+
+HOW CAN DELETE QUEUE_MANAGER
+---------------------------------------------------------------
+dltmqm queue_manager_name 
+
+note: we can delete a queue in the running state ..we can only 
+delete when the queue manager is stoped
+
+------------------------------------------------------------------
+
+HOW CAN LIST ALL THE DETAILS OF QUEUE_MANAGER DETAILS 
+----------------------------------------------------------
+--> GO FIRST THAT QUEUE_MANAGER_INSIDE
+--> display qmstatus all
+
+ 2 : display qmstatus all
+AMQ8705I: Display Queue Manager Status Details.
+   QMNAME(first)                           STATUS(RUNNING)
+   ARCHSZ(0)                               CHINIT(RUNNING)
+   CMDSERV(RUNNING)                        CONNS(25)
+   INSTDESC( )                             INSTNAME(Installation1)
+   INSTPATH(/opt/mqm)                      LDAPCONN(INACTIVE)
+   LOGINUSE(2)                             LOGPATH(/var/mqm/log/first/active/)
+   LOGUTIL(2)                              MEDIASZ(0)
+   RECSZ(1)                                REUSESZ(0)
+   STANDBY(NOPERMIT)                       STARTDA(2024-06-18)
+   STARTTI(05.15.29)                    
+-------------------------------------------------------------------------------
+
+
+
+

@@ -1,3 +1,7 @@
+IN LINUX WE CAN RUN THE COMMANDS MUST BE IN SMALL LETTERS
+IN WINDOW WE CAN RUN THE COMMANDS IN SMALL AND CAPITAL BOTH ARE WORKING 
+
+
 IN MQ THERE ARE 3 TYPES OF COMMANDS
 ---------------------------------
 1) CONTROL COMMANDS 
@@ -41,10 +45,6 @@ most of the mq admin uses only end
 
 
 
-
-
-
-
 CREATE A QUEUE_MANAGER 
 -------------------------
 crtmqm  queuemanager_name
@@ -81,6 +81,7 @@ delete when the queue manager is stoped
 
 HOW CAN LIST ALL THE DETAILS OF QUEUE_MANAGER DETAILS 
 ----------------------------------------------------------
+
 --> GO FIRST THAT QUEUE_MANAGER_INSIDE
 --> display qmstatus all
 
@@ -98,6 +99,20 @@ AMQ8705I: Display Queue Manager Status Details.
    STARTTI(05.15.29)                    
 -------------------------------------------------------------------------------
 
+HOW CAN CHECK THE PARTICULAR QUEUEMANAGER RUNNING (OR) NOT (status)
+---------------------------------------------------------------
+--> GO FIRST THAT QUEUE_MANAGER_INSIDE 
+-->display -m queue_manager_name 
+-------------------------------------------------------------
 
+HOW CAN CREATE MULTIPLE QUEUE_MANAGER AT A TIME
+----------------------------------------------------------
+crtmqm queue_manager1 | crtmqm queue_manager2 | ....
+----------------------------------------------------------
+
+HOW CAN STARTS  MULTIPLE QUEUE_MANAGERS AT A TIME
+---------------------------------------------------------
+strmqm queue_manager1 | strmqm queue_manager2 | ..
+----------------------------------------------------------
 
 
